@@ -1,0 +1,29 @@
+body {
+    background-color: lightblue;
+}
+
+#title {
+    text-align: center;
+    font-size: 100px;
+    font-family: "Times New Roman";
+    background-color: orange;
+    padding: 30px;
+    border-bottom: solid saddlebrown 18px;
+    border-radius: 10px;
+}
+
+#subtitle {
+    text-align: center;
+    font-size: 35px;
+    font-family: "Times New Roman";
+    padding: 15px;
+}
+
+#header {
+    margin: 10px;
+    font-size: 45px;
+    background-color: orange;
+    border-radius: 10px;
+    border: solid white 3px;
+    padding: 7px;
+}

@@ -1,0 +1,46 @@
+<html>
+<head>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+<% if !@data.empty? %>
+<h1 id = "header">Here is your custom ipsum:</h1>
+    <% if @type == "sent" %>
+        <% @num.to_i.times do %>
+            <div><%= randSent.to_s %></div>
+            <br>
+        <% end %>
+    <% elsif @type == "para"  %>
+        <% @num.to_i.times do %>
+            <div><%= randPara.to_s %></div>
+            <br>
+        <% end %>
+    <%  elsif @type = "page" %>
+        <% @num.to_i.times do %>
+            <div><%= randPage.to_s %></div>
+            <br>
+        <% end %>
+    <% end  %>
+    <div><%= @start %></div>
+<% else %>
+    <div id = "title">Custum Ipsum</div>
+    <div id = "subtitle">Make your own custom random text</div>
+    <form action = "/" method="post">
+      <div>Please select the amount and the type of output you would like.</div>
+      <input style="font-size: 15px" type = "number" name = "unit"><br>
+      <br>
+      <select name = "type">
+        <option value = "sent">Sentences</option>
+        <option value = "para">Paragraph</option>
+        <option value = "page">Pages</option>
+      </select><br>
+      <br>
+      <br>
+      <input type = "submit" value = "Make words!!!">
+    </form>
+
+<% end %>
+
+</body>
+</html>
